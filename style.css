@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ==== CSS VARIABLES ==== */
+:root {
+    --primary-color: #666;
+    --secondary-color: #3786bd;
+    --color-white: #fff;
+    --background-color:#75e2e9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+}
+
+/* ==== General Styles ==== */
+a,
+label,
+b,
+input,
+button {
+    display: inline-block;
+}
+input:not(.checkbox) {
+    width: 100%;
+}
+fieldset {
+    border: none;
+}
+.mb-xl-1 {
+    margin-bottom: 1rem;
+}
+.mb-xl-2 {
+    margin-bottom: 2rem;
+}
+ 
+.d--block {
+    display: block;
+}
+
+/* ==== Border styles ==== */
+ 
+
+.container {
+    width: 95%;
+    max-width: 850px;
+    margin: 10rem auto;
+}
+
+/* ==== Flex box styles ==== */
+.flex {
+    display: flex;
+}
+.flex-gap-1 {
+    column-gap: 1rem;
+}
+
+/* ==== Btn styles ==== */
+.btn {
+    display: inline-block;
+    width: 8rem;
+    height: 3rem;
+    cursor: pointer;
+    border: none;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    font-size: 1rem;
+}
+
+
+/* ==== Information and register form assigning flex basis and font size */
+
+.information,
+.register-form {
+    flex-basis: 100%;
+    
+}
+.information__title,
+.form__title {
+    font-size: 2rem
+}
+.information,
+.register-form {
+    padding: 2.2rem 2.5rem;
+ 
+}
+
+
+/* ==== Information section styles ==== */
+.information {
+    background-color: var(--secondary-color);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: var(--color-white);
+}
+.information .btn--bg-white {
+    background-color: var(--color-white);
+    width: 11rem;
+    padding: 10px;
+}
+
+/* ==== Register form section styles ==== */
+.register-form {
+    background-color: var(--color-white);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.register-form .form__title {
+    color: var(--secondary-color);
+}
+.register-form .form__control {
+    flex-basis: 100%;
+}
+.register-form label {
+    padding-bottom: 0.3rem;
+    color: var(--primary-color);
+}
+.register-form label::after {
+    content: '*';
+    margin-left: 0.3rem;
+    color: red;
+}
+.register-form input:not(.checkbox) {
+    height: 2.2rem;
+    padding: 0 0.4rem;
+}
+.register-form .terms-and-conditions {
+    color: var(--secondary-color);
+}
+
+.register-form .btn--bg-blue {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--color-white);
+    
+}
+
+/* media queries */
+@media(max-width: 950px){
+    .flex-column-lg {
+        flex-direction: column;
+    }
+    .information,
+    .register-form {
+        border-radius: 0;
+    }
+    .information {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .register-form {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+@media(max-width: 600px) {
+    .flex-column-sm {
+        flex-direction: column;
+    }
+    
+    .mb-sm-1 {
+        margin-bottom: 1rem;
+    }
+}
